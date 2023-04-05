@@ -3,12 +3,12 @@ Console.WriteLine("Hello, Welcome to Tina's Dice Game!");
 Console.WriteLine("Let's start!");
 string? decision;
 int count = 0;
+Random random = new Random();
 
 //Dice Game
 do
 {
     Console.WriteLine(" ");
-    Random random = new Random();
     int dice1 = random.Next(1, 7);
     int dice2 = random.Next(1, 7);
 
@@ -24,11 +24,13 @@ do
     {
         Console.WriteLine("Odds are still cool");
     }
+
     count ++;
     Console.WriteLine(" ");
     Console.WriteLine("Do you to Play again?(YES/NO)");
 
     decision = Console.ReadLine();
+
 } while (decision == "YES");
 
 
